@@ -29,6 +29,16 @@ function App() {
           </div>
 
           <div className="form-row">
+            <label htmlFor="role"><b>Select Role</b></label>
+            <select name="role" required>
+              <option value="">Choose your role...</option>
+              <option value="student">Student</option>
+              <option value="staff">Staff</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+
+          <div className="form-row">
             <button type="submit">Sign In</button>
           </div>
           
