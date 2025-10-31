@@ -1,0 +1,9 @@
+export const ForgotPassword = {
+  SHOW_FORGOT_PASSWORD: 'SHOW_FORGOT_PASSWORD',
+  HIDE_FORGOT_PASSWORD: 'HIDE_FORGOT_PASSWORD',
+};
+
+export const SignUp = {
+  SHOW_SIGNUP: 'SHOW_SIGNUP',
+  HIDE_SIGNUP: 'HIDE_SIGNUP',
+};
