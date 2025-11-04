@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/routes/auth.js">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/routes/auth.js" />
+              <option name="originalContent" value="const express = require('express');&#10;const db = require('../db');&#10;const router = express.Router();&#10;&#10;// Signup&#10;router.post('/signup', (req, res) =&gt; {&#10;  const { username, password, role } = req.body;&#10;  db.run(&#10;    'INSERT INTO users (username, password, role) VALUES (?, ?, ?)',&#10;    [username, password, role],&#10;    function (err) {&#10;      if (err) return res.status(400).json({ error: 'User exists' });&#10;      res.json({ id: this.lastID, username, role, token: 'fake-jwt-token' });&#10;    }&#10;  );&#10;});&#10;&#10;// Login (simulated)&#10;router.post('/login', (req, res) =&gt; {&#10;  const { username, password } = req.body;&#10;  db.get(&#10;    'SELECT * FROM users WHERE username = ? AND password = ?',&#10;    [username, password],&#10;    (err, user) =&gt; {&#10;      if (user) {&#10;        res.json({ id: user.id, username: user.username, role: user.role, token: 'fake-jwt-token' });&#10;      } else {&#10;        res.status(401).json({ error: 'Invalid credentials' });&#10;      }&#10;    }&#10;  );&#10;});&#10;&#10;module.exports = router;&#10;" />
+              <option name="updatedContent" value="const express = require('express');&#10;const db = require('../db');&#10;const router = express.Router();&#10;&#10;// Signup&#10;router.post('/signup', (req, res) =&gt; {&#10;  const { username, password, role } = req.body;&#10;  db.run(&#10;    'INSERT INTO users (username, password, role) VALUES (?, ?, ?)',&#10;    [username, password, role],&#10;    function (err) {&#10;      if (err) return res.status(400).json({ error: 'User exists' });&#10;      res.json({ id: this.lastID, username, role, token: 'fake-jwt-token' });&#10;    }&#10;  );&#10;});&#10;&#10;// Login (simulated)&#10;router.post('/login', (req, res) =&gt; {&#10;  const { username, password } = req.body;&#10;  db.get(&#10;    'SELECT * FROM users WHERE username = ? AND password = ?',&#10;    [username, password],&#10;    (err, user) =&gt; {&#10;      if (user) {&#10;        res.json({ id: user.id, username: user.username, role: user.role, token: 'fake-jwt-token' });&#10;      } else {&#10;        res.status(401).json({ error: 'Invalid credentials' });&#10;      }&#10;    }&#10;  );&#10;});&#10;&#10;module.exports = router;&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
